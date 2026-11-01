@@ -1,0 +1,97 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Páginas Base Rota da Farda</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: índice das páginas base, uma grade de cartões com código do funil, papel e o que muda por edital. Identidade Rota da Farda (preto, vermelho, dourado da logo). */
+:root{--preto:#0B0B0C;--carvao:#1B1B1E;--aco:#2E2E33;--cinza:#6B6B73;--cinza-claro:#A1A1AA;--nevoa:#D9D9DE;--gelo:#F4F4F5;--vermelho:#D7192A;--vermelho-txt:#E5313F;--ouro:#E8A332;
+  --cond:'Barlow Condensed','Arial Narrow',Arial,sans-serif;--texto:'Barlow',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--preto);background-image:repeating-linear-gradient(135deg,transparent 0 14px,rgba(255,255,255,.03) 14px 15px);color:var(--gelo);font-family:var(--texto);font-size:16px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1080px;margin:0 auto;padding-block:32px 64px;display:flex;flex-direction:column;gap:22px}
+header{display:grid;grid-template-columns:140px 1fr;gap:28px;align-items:center}
+header img{width:140px;height:auto}
+h1,h2{font-family:var(--cond);font-weight:800;text-transform:uppercase;line-height:1;margin:0;text-wrap:balance}
+h1{font-size:clamp(40px,7vw,64px)}
+h2{font-size:28px}
+p{margin:0}
+.lede{color:var(--nevoa);font-size:17.5px;max-width:64ch}
+.kicker{font-family:var(--cond);font-weight:700;font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:var(--ouro)}
+.var{color:var(--ouro);border-bottom:2px dashed var(--ouro);white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+a.pg{display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit;background:var(--carvao);border:1px solid var(--aco);border-radius:10px;padding:18px;transition:border-color .15s,transform .15s;min-width:0}
+a.pg:hover{border-color:var(--vermelho);transform:translateY(-2px)}
+a.pg:focus-visible{outline:3px solid var(--ouro);outline-offset:2px}
+.pg .top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.cod{font-family:var(--cond);font-weight:800;font-size:15px;letter-spacing:.08em;background:var(--vermelho);color:#fff;border-radius:3px;padding:2px 8px}
+.tipo{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--cinza-claro)}
+.pg h3{margin:0;font-family:var(--cond);font-weight:800;font-size:26px;text-transform:uppercase;line-height:1}
+.pg p{font-size:14.5px;color:var(--nevoa)}
+.pg .muda{font-size:13px;color:var(--ouro)}
+.pg .abrir{margin-top:auto;font-family:var(--cond);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:14px;color:var(--vermelho-txt)}
+.notas{background:var(--carvao);border:1px solid var(--aco);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.notas ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:15px;color:var(--nevoa)}
+.paleta{display:flex;flex-wrap:wrap;gap:10px}
+.sw{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--nevoa);background:var(--carvao);border:1px solid var(--aco);border-radius:6px;padding:6px 10px 6px 6px}
+.sw i{width:26px;height:26px;border-radius:4px;border:1px solid var(--aco)}
+@media (max-width:860px){.grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.grid{grid-template-columns:1fr}header{grid-template-columns:90px 1fr;gap:16px}header img{width:90px}}
+</style>
+
+<div class="wrap">
+  <header>
+    <img src="img/logo.webp" alt="Rota da Farda · Prof. Jonathan Rocha">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span class="kicker">NDS · implementação da parceria</span>
+      <h1>Páginas base do funil</h1>
+      <p class="lede">As páginas fixas do esqueleto, com copy base. A cada edital, troca só o que está em dourado tracejado, como <span class="var">[PMPI 2026]</span>, datas, banca, número de questões e o vídeo. Os códigos batem com o Fluxograma e o Esqueleto do funil.</p>
+    </div>
+  </header>
+
+  <div class="paleta" aria-label="Paleta">
+    <span class="sw"><i style="background:#0B0B0C"></i>Preto #0B0B0C</span>
+    <span class="sw"><i style="background:#2E2E33"></i>Aço #2E2E33</span>
+    <span class="sw"><i style="background:#F4F4F5"></i>Gelo #F4F4F5</span>
+    <span class="sw"><i style="background:#D7192A"></i>Vermelho #D7192A</span>
+    <span class="sw"><i style="background:#E5313F"></i>Vermelho sobre preto #E5313F</span>
+    <span class="sw"><i style="background:#E8A332"></i>Dourado da logo #E8A332</span>
+  </div>
+
+  <h2>Entrada e canal próprio</h2>
+  <div class="grid">
+    <a class="pg" href="bio.html"><span class="top"><span class="cod">N1</span><span class="tipo">Link na bio</span></span><h3>Link na bio</h3><p>Um destino principal (o grupo) e os links do edital aberto, da Turma, da Individual e do YouTube.</p><span class="muda">Muda: o link e o nome do edital aberto</span><span class="abrir">Abrir página →</span></a>
+    <a class="pg" href="grupo.html"><span class="top"><span class="cod">N2</span><span class="tipo">Captura</span></span><h3>Página do grupo</h3><p>Escolha do estado, aceite LGPD e botões para os grupos do WhatsApp.</p><span class="muda">Fixa · só os links dos grupos</span><span class="abrir">Abrir página →</span></a>
+  </div>
+
+  <h2>Kit do edital</h2>
+  <div class="grid">
+    <a class="pg" href="kit.html"><span class="top"><span class="cod">K1</span><span class="tipo">Página de vendas</span></span><h3>Kit do Edital</h3><p>Hero do edital, crença, o que vem no kit, antes e depois, depoimentos, garantia e perguntas.</p><span class="muda">Muda: edital, banca, datas, nº de questões</span><span class="abrir">Abrir página →</span></a>
+    <a class="pg" href="pacote.html"><span class="top"><span class="cod">K3</span><span class="tipo">Upsell</span></span><h3>Pacote do Edital</h3><p>Oferta única de R$ 97 depois do pagamento, com sim e não.</p><span class="muda">Muda: Legislação Bizurada e simulados</span><span class="abrir">Abrir página →</span></a>
+    <a class="pg" href="plataforma.html"><span class="top"><span class="cod">K4</span><span class="tipo">Downsell</span></span><h3>Plataforma R$ 47</h3><p>Para quem recusou o Pacote: só a plataforma até a prova.</p><span class="muda">Muda: nome e data da prova</span><span class="abrir">Abrir página →</span></a>
+    <a class="pg" href="obrigado.html"><span class="top"><span class="cod">K5</span><span class="tipo">Obrigado · ponte</span></span><h3>Obrigado</h3><p>Os 3 passos: grupo, aula Raio-X com a Turma no fim e plataforma.</p><span class="muda">Muda: o vídeo da aula do edital</span><span class="abrir">Abrir página →</span></a>
+  </div>
+
+  <h2>Turma e topo</h2>
+  <div class="grid">
+    <a class="pg" href="turma.html"><span class="top"><span class="cod">T1</span><span class="tipo">VSL</span></span><h3>Turma Rota da Farda</h3><p>VSL, crença, 4 pilares, pilha da oferta, história, alunos, garantia com continuidade e perguntas.</p><span class="muda">Muda: vídeo da live, edital e datas</span><span class="abrir">Abrir página →</span></a>
+    <a class="pg" href="flix.html"><span class="top"><span class="cod">T3</span><span class="tipo">Downsell</span></span><h3>Concurseiro Flix</h3><p>Método gravado com a plataforma até a prova, R$ 197.</p><span class="muda">Muda: só o edital da plataforma</span><span class="abrir">Abrir página →</span></a>
+    <a class="pg" href="individual.html"><span class="top"><span class="cod">U2</span><span class="tipo">Aplicação</span></span><h3>Mentoria Individual</h3><p>O que inclui, preço de fundador, call avulsa e formulário de aplicação.</p><span class="muda">Fixa · só o número de vagas</span><span class="abrir">Abrir página →</span></a>
+  </div>
+
+  <div class="notas">
+    <span class="kicker">Para a equipe</span>
+    <ul>
+      <li>Botões de compra apontam para âncoras (#checkout-kit, #checkout-turma…). Trocar pelos links do checkout próprio ao publicar.</li>
+      <li>Ficam fora destas páginas: os checkouts (no checkout próprio), a live (YouTube ou plataforma de transmissão) e o onboarding (dentro da plataforma).</li>
+      <li>A imagem principal (antes e depois com fuzil) está no topo de todas as páginas de venda. Em páginas que recebem anúncio, armas podem travar a aprovação na Meta: se uma campanha for barrada, troque só a imagem do topo daquela página.</li>
+      <li>A foto em dupla não foi usada: falta confirmar quem é a segunda pessoa e se autoriza o uso da imagem.</li>
+      <li>Depoimentos de Marcel, Jair e Felipe estão como resumo. Trocar pelos depoimentos autorizados por escrito.</li>
+      <li>Termos de uso, política de privacidade e CNPJ precisam existir antes de publicar.</li>
+    </ul>
+  </div>
+</div>
+
+</body></html>
